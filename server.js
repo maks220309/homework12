@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userRoutes = require('./routes/route')
 const path = require('path')
 require('dotenv').config()
-const a = String(process.env.U_RL)
+const a = process.env.U_RL
 console.log(typeof(a))
 mongoose
   .connect(a, { useNewUrlParser: true, useUnifiedTopology: true })
