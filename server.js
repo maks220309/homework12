@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const userRoutes = require('./routes/route')
 const path = require('path')
 require('dotenv').config()
-const a = process.env.U_RL
-console.log(typeof(a))
+const a = String(process.env.U_RL)
+console.log(a)
 mongoose
   .connect(a, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(res => { console.log('connected to DB') })
